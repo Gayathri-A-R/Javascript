@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Arrow Funtion</title>
+</head>
+<body>
+	<p id="demo0"></p>
+	<p id="demo1"></p>
+	<p id="demo2"></p>
+	<p id="demo3"></p>
+	<p id="demo4"></p>
+
+
+	<script>
+		function display() {
+			document.getElementById('demo0').innerHTML='hello from ordinary function';
+		} 
+		display();
+		
+		display2 = () => document.getElementById('demo1').innerHTML='hello from arrow function';
+		display2();
+
+		display3 = () => "hello";
+		var dis3 = display3();
+
+		document.getElementById('demo2').innerHTML=dis3;
+
+		display4 = (firstName,LastName) => "Hello "+firstName+" "+LastName;
+		var dis4 = display4('Code','Red');
+
+		document.getElementById('demo3').innerHTML=dis4;
+		debugger;
+		display5 = name => "name: "+name;
+		dis5=display5('Gayu');
+
+		document.getElementById('demo4').innerHTML=dis5;
+
+	</script>
+</body>
+</html>

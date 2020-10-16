@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>onchange</title>
+	
+</head>
+<body>
+<input type="text" name="name" id="fname" onchange="upper()">
+
+<script>
+	function upper() {
+		var x= document.getElementById('fname');
+		x.value=x.value.toUpperCase();
+	}
+</script>
+
+</body>
+</html>

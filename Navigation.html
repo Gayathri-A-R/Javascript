@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Navigation</title>
+</head>
+<body>
+<div id="div1">
+	<h1 id="h11">I am the child of div1</h1>
+</div>
+<p id="p1"></p>
+	<script>
+		var text="";
+		var para=document.getElementById('p1');
+		var child=document.getElementById('h11');
+		var parent=document.getElementById('div1');
+		text+=child.innerHTML;
+		text+=child.firstChild.nodeValue;	//child para has a text node child
+		text+=child.childNodes[0].nodeValue;
+		para.innerHTML=text;
+
+		alert(document.body.innerHTML);
+		alert(document.documentElement.innerHTML);
+	</script>
+</body>
+</html>

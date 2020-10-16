@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS Samples</title>
+</head>
+<body>
+	<button type="button" onclick="document.getElementById('demo').innerHTML= Date()">Click Here</button>
+	<p id="demo"></p>
+	<button onclick="function1()">Click</button>
+	<p id="demo2">Answer</p>
+	<button onclick="function2()">Click</button>
+	<p id="demo3"></p>
+
+	<p>Math Section</p>
+	<button onclick="function3()">Get a Random Number</button>
+	<p id="demo4"></p>
+
+	<button onclick="this.innerHTML=Date()">The time is?</button>
+	<button onclick="window.print()">Print</button>
+
+	<script>
+		alert("Happy Coding:)")
+		var x=8;
+		var y=90;
+		function function1(){
+			document.getElementById('demo2').innerHTML=x+y;
+		}
+
+		function function2(){
+			var d=new Date();
+			alert(d);
+			y=d.getFullYear();
+			alert(y);
+			alert(d.getMonth());
+		}
+
+		function function3() {
+			document.getElementById('demo4').innerHTML=Math.random();
+			
+		}
+		document.write("Hello");
+		window.alert("Pooppyyyyy");
+		console.log("KIIIIIII");
+
+		var x="abcdefg";
+		var l=x.length;
+		document.write(l);
+
+
+
+/*
+Six other escape sequences are valid in JavaScript:
+
+Code	Result
+\b	Backspace
+\f	Form Feed
+\n	New Line
+\r	Carriage Return
+\t	Horizontal Tabulator
+\v	Vertical Tabulator
+*/
+
+document.write("\bgayathri\n");
+document.write("\fgayathri\n");
+document.write("\ngayathri\n");
+document.write("\rgayathri\n");
+document.write("\tgayathri\n");
+document.write("\vgayathri\n");
+document.write("gayathri \
+	ar ");
+var txt="gayathri ar violet101"
+document.write(txt.indexOf('th'));
+document.write(txt.lastIndexOf('297'));
+document.write(txt.indexOf('101'),10);
+document.write(txt.search('ar'));
+document.write("\n")
+document.write("Hello");
+
+//string extraction
+
+var txt2="adobe life is beautiful"
+document.write(txt2.slice(6,11));
+document.write(txt2.slice(-8,-1));
+document.write(txt2.substring(6,11));//cannot have negative indices
+document.write(txt2.substr(6,4));
+document.write(txt2.slice(6));//print all chara after 6th
+
+//content 
+
+var txt3= txt2.replace('adobe', 'gec');
+document.write(txt3);
+var txt4="Google is hiring! Google";
+var txt5=txt4.replace(/GOOGLE/i, "Adobe");
+var txt6=txt4.replace(/Google/g, "Adobe");
+document.write(txt5);
+document.write(txt6);
+
+document.write(txt4.concat(" ",txt6));
+var doc="	Code	";
+document.write(doc);
+document.write(doc.trim());
+
+var str = "       Hello World!        ";
+alert(str.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, ''));
+
+document.write(txt4.charAt(0));
+document.write(txt4.charCodeAt(0));
+document.write(txt4[0]);
+txt4[0]='H';
+document.write(txt4[0]);
+var str2="h,e,l,l,o";
+var list1=str2.split(",");
+var list3=str2.split(" ");
+var list4=str2.split();
+document.write(list1);
+document.write(list3);
+document.write(list4);
+document.write(list4[0]);
+
+str3="hello";
+document.write(str3.split(""));
+
+//numbers
+
+var x="100", y="10";
+var z=x/y;
+document.write(z);
+document.write(100/'apple'); //Not a Number NaN
+var g=100/'apple';
+document.write(isNaN(g));
+
+var num=2;
+while(num != Infinity) {
+	num*=num;
+}
+document.write(num);
+
+var num2=32;
+var x1=num2.toString(10);
+var x2=num2.toString(2);
+var x3=num2.toString(16);
+var x4=num2.toString(32);
+
+document.write(x1+x2+x3+x4);
+
+var num3=100;
+var str3=num3.toString();
+document.write("string: "+str3);
+
+var float=5.9878;
+var rounded=float.toExponential(4);
+document.write(rounded);
+document.write(float.toFixed(7));
+document.write(float.toPrecision(5));
+document.write(num2.valueOf());  //internally converting number objects to primitive number
+
+var array = ['pineapple','apple', 'banana', 'cadberry', 'dates'];
+document.write(array.sort());
+document.write(array.reverse());
+
+var numarray =[34,1,3445,23,89];
+document.write(numarray);
+var sortedarray=numarray.sort(function(a,b){ return a-b});
+document.write(numarray);
+document.write(sortedarray);
+var sortedarraydec=numarray.sort(function(a,b){ return b-a});
+document.write(sortedarraydec);
+
+var points = [40, 100, 1, 5, 25, 10];
+document.write("Random Sorting: "+points.sort(function(a,b) { return .5 - Math.random()}));
+
+document.write("Fisher Yates Shuffle");
+var points = [40, 100, 1, 5, 25, 10];
+
+for( i=points.length - 1; i>0; i--) {
+	j=Math.floor(Math.random() * i);
+	k=points[i];
+	points[i]=points[j];
+	points[j]=k;
+}
+
+document.write(points);
+document.write("Max Value in an array: "+Math.max.apply(null, points));
+document.write("Min Value in an array: "+Math.min.apply(null, points));
+
+document.write("Sort:");
+function arrayMax(arr) {
+	var len=arr.length;
+	var max=-Infinity;
+	while(len--) {
+		if(arr[len]>max) {
+			max=arr[len];
+		}
+	}
+	return max;
+}
+
+var max=arrayMax(points)
+document.write(max);
+
+document.write("Sort Desc:");
+function arrayMax(arr) {
+	var len=arr.length;
+	var min=Infinity;
+	while(len--) {
+		if(arr[len]<min) {
+			min=arr[len];
+		}
+	}
+	return min;
+}
+
+var min=arrayMax(points)
+document.write(min);
+
+document.write("Sorting object arrays: ");
+
+var obarray= [
+	{type: 'volvo', year: 2019},
+	{ type: 'ford', year: 2020},
+	{ type: 'maruthi', year: 2000}
+];
+
+var arrs = obarray.sort(function(a,b) { return a.year- b.year});
+document.write(arrs[0].type+':'+arrs[0].year+',',arrs[1].type+':'+arrs[1].year+',',arrs[2].type+':'+arrs[2].year);
+
+var obarray= [
+	{type: 'volvo', year: 2019},
+	{ type: 'ford', year: 2020},
+	{ type: 'maruthi', year: 2000}
+];
+
+var arrss = obarray.sort(function(a,b) { 
+	var x= a.type.toLowerCase();
+	var y= b.type.toLowerCase();
+	if(x<y){ return -1;}
+	if(x>y){ return 1;}
+	return 0;
+	});
+document.write(arrss[0].type+':'+arrss[0].year+',',arrss[1].type+':'+arrss[1].year+',',arrss[2].type+':'+arrss[2].year);
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Javascript</title>
+</head>
+<body>
+
+	<button onclick="window.print()">Print</button>
+	<p id="section1">Name</p>
+	<p id="section2"></p>
+	<p id="section3"></p>
+	<p id="section4"></p>
+	<p id="section5"></p>
+	<p id="section6"></p>
+	<p id="section7"></p>
+	<p id="section8"></p>
+	<p id="section9"></p>
+	<p id="section10"></p>
+	<p id="section11"></p>
+	<p id="section12"></p>
+	<p id="section13"></p>
+	<p id="section14"></p>
+	<p id="section15"></p>
+	<p id="section16"></p>
+	<p id="section17"></p>
+	<p id="section18"></p>
+	<p id="section19"></p>
+	<p id="section20"></p>
+	<p id="section21"></p>
+	<p id="section22"></p>
+	<p id="section23"></p>
+	<p id="section24"></p>
+	<p id="section25"></p>
+	<p id="section26"></p>
+	<p id="section27"></p>
+	<p id="section28"></p>
+	<p id="section29"></p>
+	<p id="section30"></p>
+	<p id="section31"></p>
+	<button onclick="function2()">FIsh Yates Shuffle</button>
+<script>
+	var person= {
+		name: "gayathri",
+		age: 20,
+		username: "codered"
+	};
+	document.getElementById("section1").innerHTML=person.name;
+	console.log("this is easy");
+	window.alert("Hey great to see you again!!");
+	document.write("I'm Code Red");
+	document.getElementById("section2").innerHTML=5&1;
+	document.getElementById("section3").innerHTML=5>>>1;
+	document.getElementById("section4").innerHTML=5>>1;
+	document.getElementById("section5").innerHTML=5<<1;
+	document.getElementById("section6").innerHTML=Math.pow(2,3);
+
+	str=" hello whos this, this is gonna be blasted in a moment";
+	document.getElementById("section7").innerHTML=str.indexOf("this");
+	document.getElementById("section8").innerHTML=str.lastIndexOf("this");
+	document.getElementById("section9").innerHTML=str.search("this");
+	document.getElementById("section10").innerHTML=str.charAt(1);
+	var arr=str.split("")
+	document.getElementById("section11").innerHTML=arr;
+	document.getElementById("section12").innerHTML="The first element is " +arr[1];
+	document.getElementById("section13").innerHTML=Number.POSITIVE_INFINITY;
+	var array=["erer","rtrdh"];
+	document.getElementById("section14").innerHTML=array.join("5");
+
+	function function2() {
+		var array=[23,1,67,45,90,89];
+		document.write("Before Sort : ",array);
+		for(i=array.length-1;i>0;i--) {
+			document.write("i = ",i,"<br>")
+			j=Math.floor(Math.random()*i);
+			document.write("\nj = ",j,"<br>");
+			k=array[i];
+			document.write("k = ",k,"<br>");
+			array[i]=array[j];
+			array[j]=k
+		}
+		document.write(array);
+		document.write("Max value: ",Math.max.apply(null,array));
+		document.write("Min value: ",Math.min.apply(null,array));
+		min=Number.POSITIVE_INFINITY;
+		length=array.length;
+		while(length--) {
+			if(array[length]<min) {
+				min=array[length];
+			}
+		}
+		document.write("Min value: ",min,"<br>");
+
+		array.forEach(function3);
+
+		function function3(value) {
+			document.write(value+"<br>");
+		}
+
+		var array2=array.map(function4);
+
+		function function4(value) {
+			return value*2;
+		}
+
+		document.write("Original array : ",array,"<br>");
+		document.write("MOdified array : ",array2,"<br>");
+
+
+		var array3=array.filter(function5);
+
+		function function5(value) {
+			return value> 50;
+		}
+
+		document.write("Original array : ",array,"<br>");
+		document.write("MOdified array : ",array3,"<br>");
+
+		
+		var sum=array.reduce(function6,100);
+
+		function function6(total,value) {
+			return total+value;
+		}
+
+		document.write("Sum : ",sum);
+
+		var gh=array.some(function7);
+
+		/*every*/
+
+		function function7(value) {
+			return value >50;
+		}
+
+		document.write(gh,"<br>");
+
+		/*find   : find the first occurance of an item that passes the condition
+		findIndex   : find the first index of an item that passes the condition*/
+	}
+</script>
+
+<button id="datebut" onclick="function8()">View Date</button>
+<script>
+	var d=new Date();
+	function function8() {
+		document.getElementById("datebut").innerHTML=d;
+		document.write(d.getFullYear(),"<br>");
+		document.write(d.getMonth(),"<br>");
+		document.write(d.toString(),"<br>");
+		document.write(d.toUTCString(),"<br>");
+		document.write(d.toDateString(),"<br>");
+		var da=new Date("2015-03-25");
+		document.write(da,"<br>");
+		var datem=Date.parse("March 1, 2020");
+		document.write(datem);
+		var newdate = Date(datem);
+		document.write(newdate,"<br>");
+		document.write(Date.now())
+
+	}
+</script>
+
+<script>
+	var list=[1,2,3,4];
+	loop: {
+		document.getElementById("section15").innerHTML=list[0];
+		document.getElementById("section15").innerHTML=list[1];
+		break loop;
+		document.getElementById("section15").innerHTML=list[2];
+		document.getElementById("section15").innerHTML=list[3];
+	}
+</script>
+</body>
+</html>

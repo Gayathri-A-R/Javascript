@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS Sample</title>
+</head>
+<body>
+	<p id="nav"></p>
+
+	<script>
+		var nav=['Home','About','Contact','Register'];
+		var len=nav.length;
+		var text="<ul>";
+		var i;
+		for(i=0;i<len;i++) {
+			text+="<li>"+nav[i]+"</li>";
+		}
+		text+="</ul>";
+
+		document.getElementById('nav').innerHTML=text;
+	</script>
+</body>
+</html>

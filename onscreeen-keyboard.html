@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>On-Screen Keyboard</title>
+</head>
+<body>
+	<div class="keyboard">
+		<button onclick="function1(this)">A</button>
+		<button onclick="function1(this)">B</button>
+		<button onclick="function1(this)">C</button>
+		<button onclick="function1(this)">D</button>
+		<button onclick="function1(this)">E</button>
+		<button onclick="function1(this)">F</button>
+		<button onclick="function1(this)">G</button>
+		<button onclick="function1(this)">H</button>
+		<button onclick="function1(this)">I</button>
+		<button onclick="function1(this)">J</button>
+		<button onclick="function1(this)">K</button>
+		<button onclick="function1(this)">L</button>
+		<button onclick="function1(this)">M</button>
+		<button onclick="function1(this)">N</button>
+		<button onclick="function1(this)">O</button>
+		<button onclick="function1(this)">P</button>
+		<button onclick="function1(this)">Q</button>
+		<button onclick="function1(this)">R</button>
+		<button onclick="function1(this)">S</button>
+		<button onclick="function1(this)">T</button>
+		<button onclick="function1(this)">U</button>
+		<button onclick="function1(this)">V</button>
+		<button onclick="function1(this)">W</button>
+		<button onclick="function1(this)">X</button>
+		<button onclick="function1(this)">Y</button>
+		<button onclick="function1(this)">Z</button>
+		<button onclick="function2()">&lt;-</button>
+		<button onclick="function3()">Clear</button>
+	</div>
+
+	<div class="editor">
+		<p id="edt"></p>
+	</div>
+
+
+	<script>
+		var elem = document.getElementById("edt").innerHTML;
+		function function1(param) {
+			var cont = param.innerHTML;
+			elem = elem + cont;
+			document.getElementById("edt").innerHTML = elem;
+		}
+
+		function function2() {
+			var elem = document.getElementById("edt").innerHTML;
+			var string = elem.split("");
+			string.pop();
+			var newstring  = string.join("");
+			elem = newstring;
+			document.getElementById("edt").innerHTML = elem;
+		}
+
+		function function3() {
+			elem = "";
+			document.getElementById("edt").innerHTML = elem;
+		}
+		
+
+	</script>
+</body>
+</html>

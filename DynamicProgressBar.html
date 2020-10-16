@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dynamic Progress Bar</title>
+	<style>
+		#progressbar {
+			height: 50px;
+			width: 100%;
+			background-color: gray;
+			position: relative;
+			border: 1px solid gray;
+			border-radius: 30px;
+		}
+		#bar {
+			background-color: red;
+			height: 50px;
+			width: 0;
+			position: absolute;
+			border: 1px solid red;
+			border-radius: 30px;
+		}
+	</style>
+</head>
+<body>
+	<div id="progressbar">
+		<div id="bar"></div>
+	</div>
+
+	<script>
+		var width=0;
+		var timer = setInterval(frame,20);
+		function frame() {
+			if(width==100) {
+				clearInterval(timer);
+			}
+			else {
+				width++;
+				document.getElementById('bar').style.width = width + '%';
+			}
+		}
+	</script>
+</body>
+</html>

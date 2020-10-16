@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Event Listener- Capture Mode</title>
+</head>
+<body>
+<div id="parent">
+	<p id="child">Click Child</p>
+</div>
+
+<script>
+	var x=document.getElementById('parent');
+	x.addEventListener('click',function1, true);
+
+	var x=document.getElementById('child');
+	x.addEventListener('click',function2, true);
+
+	function function1() {
+		alert("Hello from parent");
+	}
+
+	function function2() {
+		alert("Hello from child");
+	}
+</script>
+</body>
+</html>

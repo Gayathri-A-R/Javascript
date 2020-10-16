@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Digital Watch</title>
+</head>
+<body>
+<p id="demo0"></p>
+<p id="demo"></p>
+<button id="btn" onclick="stopFunction()">Click to stop timer</button>
+
+<script>
+	var timer = setInterval(myTimer,1000);
+	function myTimer(){
+		var d = new Date();
+		var dt = d.toDateString();
+		var t =d.toLocaleTimeString();
+		document.getElementById('demo0').innerHTML=dt;
+		document.getElementById('demo').innerHTML=t;
+	
+	}
+
+	function stopFunction() {
+		clearInterval(timer);
+	}
+	
+
+</script>
+
+</body>
+</html>

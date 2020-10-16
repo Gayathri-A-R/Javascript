@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Toggle bg color</title>
+	<style>
+		body {
+			background-color: yellow;
+		}
+	</style>
+</head>
+<body>
+	<button id="btn" onclick="func2()">Stop</button>
+	<script>
+		var timer = setInterval(func,500);
+		function func() {
+			document.body.style.backgroundColor = document.body.style.backgroundColor == 'yellow' ? 'pink' : 'yellow';
+		}
+
+		function func2() {
+			clearInterval(timer);
+		}
+	</script>
+</body>
+</html>

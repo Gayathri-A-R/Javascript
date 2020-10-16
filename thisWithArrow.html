@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>this with arrow</title>
+</head>
+<body>
+	<button id="btn">Click Me</button>
+	<p id="demo"></p>
+
+	<button id="btn2">Click Me</button>
+	<p id="demo2"></p>
+<script>
+	var hello;
+	hello= function() {
+		document.getElementById('demo').innerHTML+=this;
+	}
+
+	window.addEventListener("load",hello);
+
+	document.getElementById('btn').addEventListener("click",hello);
+
+	var hello2;
+	hello2 = () => document.getElementById('demo2').innerHTML+=this;
+	window.addEventListener('load',hello2);
+	document.getElementById('btn2').addEventListener('click',hello2);
+
+</script>
+</body>
+</html>
